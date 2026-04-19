@@ -1,0 +1,75 @@
+
+<div class="results-header">
+  <h1 class="results-title">
+    <span><%= cuisine %></span> Cuisine
+  </h1>
+
+  
+  <div class="results-search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input
+      type="text"
+      id="cuisine-search"
+      data-cuisine="<%= cuisine %>"
+      placeholder="Filter <%= cuisine %> recipes…"
+      value="<%= query || '' %>"
+      autocomplete="off"
+    />
+  </div>
+</div>
+
+
+<div class="toolbar">
+  <div class="toolbar-info">
+    <span class="badge">Cuisine</span>
+    <strong style="margin-left:6px"><%= cuisine %></strong>
+    &nbsp;&mdash;&nbsp;
+    Showing
+    <strong id="count"><%= Math.min(number, totalResults) %></strong>
+    of <strong><%= totalResults %></strong> recipes
+  </div>
+
+  <div class="pagination">
+    <% if (offset > 0) { %>
+    <a
+      class="btn btn-ghost btn-sm"
+      href="/cuisine/<%= cuisine %>?query=<%= encodeURIComponent(query || '') %>&offset=<%= offset - number %>&number=<%= number %>"
+    >
+      <i class="fa-solid fa-arrow-left"></i> Prev
+    </a>
+    <% } %>
+    <% if (offset + number < totalResults) { %>
+    <a
+      class="btn btn-primary btn-sm"
+      href="/cuisine/<%= cuisine %>?query=<%= encodeURIComponent(query || '') %>&offset=<%= offset + number %>&number=<%= number %>"
+    >
+      Next <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <% } %>
+  </div>
+</div>
+
+
+<div id="cuisine-results" class="grid results">
+  <% if (!recipes.length) { %>
+  <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-3)">
+    <i class="fa-solid fa-bowl-food" style="font-size: 2.5rem; margin-bottom: 1rem; display:block"></i>
+    No recipes found. Try a different search or browse another cuisine.
+  </div>
+  <% } %>
+
+  <% recipes.forEach(function(r) { %>
+  <a class="recipe-tile" href="/recipe/<%= r.id %>">
+    <img class="recipe-img" src="<%= r.image %>" alt="<%= r.title %>" loading="lazy" />
+    <div class="recipe-tile-body">
+      <p class="recipe-title-tile"><%= r.title %></p>
+      <div class="meta">
+        <i class="fa-regular fa-clock"></i>
+        <%= r.readyInMinutes || 30 %> min
+      </div>
+    </div>
+  </a>
+  <% }) %>
+</div>
+
+<script src="/result.js"></script>

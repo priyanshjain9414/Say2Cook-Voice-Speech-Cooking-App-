@@ -1,0 +1,56 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      
+      <div>
+        <div class="footer-brand-name">
+          <i class="fa-solid fa-utensils" style="color: var(--brand)"></i>
+          Say2Cook
+        </div>
+        <p class="footer-tagline">
+          Voice-guided cooking for every cuisine. Just say the word — we'll walk you through every step.
+        </p>
+      </div>
+
+      
+      <div>
+        <p class="footer-col-title">Navigate</p>
+        <ul class="footer-links">
+          <li><a href="/"><i class="fa-solid fa-house fa-xs me-1"></i> Home</a></li>
+          <li><a href="/favourites"><i class="fa-solid fa-heart fa-xs me-1"></i> Favourites</a></li>
+          <% if (!currentUser) { %>
+          <li><a href="/login"><i class="fa-solid fa-right-to-bracket fa-xs me-1"></i> Login</a></li>
+          <li><a href="/signup"><i class="fa-solid fa-user-plus fa-xs me-1"></i> Sign Up</a></li>
+          <% } else { %>
+          <li><a href="/logout"><i class="fa-solid fa-right-from-bracket fa-xs me-1"></i> Logout</a></li>
+          <% } %>
+        </ul>
+      </div>
+
+     
+      <div>
+        <p class="footer-col-title">Cuisines</p>
+        <ul class="footer-links">
+          <li><a href="/cuisine/Indian"><i class="fa-solid fa-bowl-rice"></i> Indian</a></li>
+<li><a href="/cuisine/Italian"><i class="fa-solid fa-pizza-slice"></i> Italian</a></li>
+<li><a href="/cuisine/Chinese"><i class="fa-solid fa-bowl-food"></i> Chinese</a></li>
+<li><a href="/cuisine/Japanese"><i class="fa-solid fa-fish"></i> Japanese</a></li>
+<li><a href="/cuisine/Mexican"><i class="fa-solid fa-pepper-hot"></i> Mexican</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; <%= new Date().getFullYear() %> Say2Cook. All rights reserved.
+      </p>
+      <span class="footer-made">
+        Made with <i class="fa-solid fa-heart"></i> for food lovers
+      </span>
+    </div>
+
+  </div>
+</footer>

@@ -1,0 +1,40 @@
+<nav class="site-nav">
+  <div class="container nav-inner">
+
+    
+    <a class="nav-brand" href="/">
+      <i class="fa-solid fa-utensils"></i>
+      Say2Cook
+      <span class="brand-dot"></span>
+    </a>
+
+   
+    <ul class="nav-links">
+      <li>
+        <a href="/" <% if (typeof title === 'undefined') { %>class="active"<% } %>>
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+      </li>
+    </ul>
+
+   
+    <div class="nav-right">
+      <% if (currentUser) { %>
+        <a href="/favourites" class="nav-fav">
+          <i class="fa-solid fa-heart"></i> Favourites
+        </a>
+        <a href="/logout" class="nav-btn nav-btn-ghost">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </a>
+      <% } else { %>
+        <a href="/login" class="nav-btn nav-btn-ghost">
+          <i class="fa-solid fa-right-to-bracket"></i> Login
+        </a>
+        <a href="/signup" class="nav-btn nav-btn-primary">
+          <i class="fa-solid fa-user-plus"></i> Sign Up
+        </a>
+      <% } %>
+    </div>
+
+  </div>
+</nav>

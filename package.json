@@ -1,0 +1,25 @@
+{
+  "name": "cuisine-recipes",
+  "version": "1.0.0",
+  "description": "Browse recipes by cuisine; view ingredients and steps (EJS + Express).",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.2",
+    "mongoose": "^8.17.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "strip-comments": "^2.0.1"
+  }
+}

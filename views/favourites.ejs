@@ -1,0 +1,41 @@
+<div style="margin-bottom: 1.5rem">
+  <h1 style="font-family: 'Fraunces', serif; font-size: 1.8rem">
+    <i class="fa-solid fa-heart" style="color: #e03131; font-size: 1.4rem; margin-right: 8px"></i>
+    My Favourites
+  </h1>
+  <p style="color: var(--text-3); font-size: 0.9rem; margin: 0">Your saved recipes — ready whenever you are.</p>
+</div>
+
+<% if (!favourites.length) { %>
+<div class="fav-empty">
+  <i class="fa-regular fa-heart"></i>
+  <p style="font-family:'Fraunces',serif; font-size:1.2rem; font-weight:600; color:var(--text-2); margin-bottom:6px">No favourites yet</p>
+  <p style="font-size:0.9rem">Browse cuisines and tap <i class="fa-solid fa-heart" style="color: #e03131; font-size: 1.4rem;"></i>on any recipe to save it here.</p>
+  <a href="/" class="btn btn-primary" style="margin-top:1rem; display:inline-flex">
+    <i class="fa-solid fa-compass"></i> Explore Recipes
+  </a>
+</div>
+<% } else { %>
+<div class="grid results">
+  <% favourites.forEach(function(fav) { %>
+  <div class="fav-tile">
+    <a href="/recipe/<%= fav.recipeId %>">
+      <img
+        class="recipe-img"
+        src="<%= fav.image %>"
+        alt="<%= fav.title %>"
+        loading="lazy"
+      />
+    </a>
+    <div class="fav-tile-body">
+      <p class="fav-tile-title"><%= fav.title %></p>
+      <form action="/favourite/<%= fav.recipeId %>/remove" method="POST">
+        <button type="submit" class="btn btn-danger btn-sm w-100" style="justify-content:center">
+          <i class="fa-solid fa-trash-can"></i> Remove
+        </button>
+      </form>
+    </div>
+  </div>
+  <% }) %>
+</div>
+<% } %>

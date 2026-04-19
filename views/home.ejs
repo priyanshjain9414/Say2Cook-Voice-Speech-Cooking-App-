@@ -1,0 +1,46 @@
+<div class="home-hero">
+  <h1>Cook anything, <em>hands-free.</em></h1>
+  <p>Search any recipe, pick a cuisine, and let Say2Cook read every step aloud while you cook.</p>
+
+ 
+  <div class="search-wrapper">
+    <div class="search-bar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input
+        type="text"
+        id="home-search"
+        placeholder="Search recipes — try &quot;pasta&quot; or &quot;biryani&quot;…"
+        autocomplete="off"
+      />
+      <button type="button">Search</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="home-results" class="grid cuisines">
+
+  <%
+    const emoji = {
+      Indian: "🍛", Italian: "🍝", Chinese: "🥡", Thai: "🍲",
+      Mexican: "🌮", Japanese: "🍣", Korean: "🍗", French: "🥖",
+      Spanish: "🥘", Greek: "🥙", Turkish: "🥙", Vietnamese: "🍜",
+      American: "🍔", British: "🥧", German: "🥨"
+    };
+  %>
+
+  <% cuisines.forEach(function(c) { %>
+  <a class="cuisine-tile" href="/cuisine/<%= c %>">
+    <span class="cuisine-emoji"><%= emoji[c] || "🍽️" %></span>
+    <strong><%= c %></strong>
+  </a>
+  <% }); %>
+
+</div>
+
+<script>
+  
+  window.cuisines = <%- JSON.stringify(cuisines) %>;
+  window.emoji    = <%- JSON.stringify(emoji) %>;
+</script>
+<script src="/home.js"></script>
