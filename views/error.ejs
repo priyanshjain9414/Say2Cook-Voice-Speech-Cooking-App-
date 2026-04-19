@@ -1,0 +1,28 @@
+<div class="error-wrap">
+  <div class="error-card">
+
+    <div class="error-code"><%= status || 500 %></div>
+
+    <p class="error-message"><%= message || "Something went wrong" %></p>
+    <p class="error-sub">
+      We hit a snag while processing your request. Don't worry — it's not you, it's us.
+    </p>
+
+    <div class="error-actions">
+      <a href="javascript:history.back()" class="btn btn-ghost">
+        <i class="fa-solid fa-arrow-left"></i> Go Back
+      </a>
+      <a href="/" class="btn btn-primary">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </div>
+
+    <% if (typeof err !== 'undefined' && process.env.NODE_ENV === 'development') { %>
+    <div style="margin-top: 2rem; text-align: left">
+      <p style="font-size:0.75rem; font-weight:700; color:var(--text-3); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px">Debug Info</p>
+      <pre style="background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:14px; font-size:0.75rem; color:var(--text-2); overflow:auto; white-space:pre-wrap"><%= err.stack %></pre>
+    </div>
+    <% } %>
+
+  </div>
+</div>
