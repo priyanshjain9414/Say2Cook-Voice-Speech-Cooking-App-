@@ -10,7 +10,7 @@ Search any recipe, pick a cuisine, and let Say2Cook read every step aloud while 
 
 ---
 
-##  About the Project
+## About the Project
 
 Say2Cook is a full-stack web application that makes cooking easier and more accessible through **voice-guided step-by-step cooking**. Instead of constantly touching your phone with messy hands, you simply say "next" and the app reads the next step aloud.
 
