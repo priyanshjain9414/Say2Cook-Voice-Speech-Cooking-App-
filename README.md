@@ -6,6 +6,7 @@
 **Cook anything, hands-free.**  
 Search any recipe, pick a cuisine, and let Say2Cook read every step aloud while you cook.
 
+</div>
 ---
 
 ##  About the Project
