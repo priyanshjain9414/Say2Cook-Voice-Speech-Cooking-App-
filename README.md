@@ -5,7 +5,8 @@
 
 **Cook anything, hands-free.**  
 Search any recipe, pick a cuisine, and let Say2Cook read every step aloud while you cook.
-[Click here for the Live Demo]([https://your-app-link.render.com](https://say2cook-voice-speech-cooking-app-1.onrender.com))
+
+[Click here for the Live Demo](https://say2cook-voice-speech-cooking-app-1.onrender.com)
 
 </div>
 
