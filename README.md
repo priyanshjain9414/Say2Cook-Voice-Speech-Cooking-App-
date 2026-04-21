@@ -2,40 +2,11 @@
 
 <div align="center">
 
-![Say2Cook Banner](https://img.shields.io/badge/Say2Cook-Voice%20Cooking-e8521a?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMSAySDlDNy45IDIgNyAyLjkgNyA0djJINXYyaDJ2MTBoMlYxNmg2djJoMlY4aDE1VjZoLTJWNGMwLTEuMS0uOS0yLTItMmgtMnptMCAyaDJ2MmgtcnptLTMgNmg4djhoLTh6Ii8+PC9zdmc+)
-![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-4.x-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![EJS](https://img.shields.io/badge/EJS-Templates-B4CA65?style=for-the-badge)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 **Cook anything, hands-free.**  
 Search any recipe, pick a cuisine, and let Say2Cook read every step aloud while you cook.
 
-[🚀 Live Demo](#) &nbsp;|&nbsp; [📸 Screenshots](#screenshots) &nbsp;|&nbsp; [🛠 Setup](#getting-started) &nbsp;|&nbsp; [🤝 Contribute](#contributing)
-
-</div>
-
 ---
-
-## 📋 Table of Contents
-
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Screenshots](#screenshots)
-- [File Structure](#file-structure)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Variables](#environment-variables)
-  - [Running the App](#running-the-app)
-- [API Reference](#api-reference)
-- [How It Works](#how-it-works)
-- [Contributing](#contributing)
-- [Known Issues](#known-issues)
-- [Future Improvements](#future-improvements)
-- [Contact](#contact)
 
 ---
 
