@@ -8,8 +8,6 @@ Search any recipe, pick a cuisine, and let Say2Cook read every step aloud while 
 
 ---
 
----
-
 ## 📖 About the Project
 
 Say2Cook is a full-stack web application that makes cooking easier and more accessible through **voice-guided step-by-step cooking**. Instead of constantly touching your phone with messy hands, you simply say "next" and the app reads the next step aloud.
@@ -20,44 +18,44 @@ Built as a personal project to learn full-stack development with Node.js, Expres
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🔐 Authentication
+###  Authentication
 - User signup and login with **bcrypt** password hashing
 - Session-based authentication using **express-session** + **connect-mongo**
 - Flash messages for login errors, signup success, and all user actions
 - Protected routes — cuisine, recipe, and favourites pages require login
 
-### 🍽️ Recipe Discovery
+###  Recipe Discovery
 - Browse **15 world cuisines** on the home page (Indian, Italian, Chinese, Japanese, Mexican, and more)
 - **Live search** — type in the search bar and results update instantly without page reload
 - **Cuisine-specific search** — filter recipes within a cuisine in real time
 - **Pagination** — navigate through large result sets with Prev / Next
 - Recipe cards show image, title, and ready time at a glance
 
-### 🔊 Voice Cooking Mode
+###  Voice Cooking Mode
 - **Text-to-speech** reads each step aloud using the Web Speech API
 - **Voice commands** — say "next", "repeat", "stop", "pause", "resume" — no hands needed
 - **Auto timer** — if a step mentions a time (e.g. "cook for 10 minutes"), a countdown timer starts automatically
 - Speech supported in **English and Hindi only** — other languages show a warning instead of broken audio
 - Steps are **highlighted** in yellow as they are read
 
-### 🌍 Recipe Translation
+###  Recipe Translation
 - Translate ingredients and steps into **19 languages** including Hindi, Tamil, French, Japanese, Arabic, and more
 - Powered by **Azure Cognitive Translator API**
 - Translation updates the page text in real-time without a page reload
 - Voice mode falls back gracefully when text is in an unsupported speech language
-
-### ❤️ Favourites
+  
+###  Favourites
 - Save any recipe to your personal favourites list
 - Remove recipes you no longer want
 - Favourites are stored per user in MongoDB
 
-### 🥗 Nutrition Facts
+###  Nutrition Facts
 - Each recipe page shows a nutrition table: Calories, Carbohydrates, Fat, Protein, Sugar, Fiber
 - Calories highlighted in orange for quick reference
 
-### 🎨 UI & Design
+###  UI & Design
 - Custom warm culinary design — saffron/orange palette with **Fraunces** (display) and **DM Sans** (body) fonts
 - Fully responsive — works on mobile, tablet, and desktop
 - Bootstrap 5 for grid and utilities, minimal custom CSS on top
@@ -65,7 +63,7 @@ Built as a personal project to learn full-stack development with Node.js, Expres
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -84,21 +82,7 @@ Built as a personal project to learn full-stack development with Node.js, Expres
 
 ---
 
-## 📸 Screenshots
-
-> _Add screenshots here after deployment_
-
-| Home Page | Recipe Detail | Voice Mode |
-|---|---|---|
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
-
-| Login | Favourites | Error Page |
-|---|---|---|
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
-
----
-
-## 📁 File Structure
+##  File Structure
 
 ```
 Say2Cook/
@@ -141,7 +125,7 @@ Say2Cook/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -200,7 +184,6 @@ SESSION_SECRET=your_random_secret_string_here
 NODE_ENV=development
 ```
 
-> ⚠️ **Never commit your `.env` file to git.** It is already included in `.gitignore`.
 
 ---
 
@@ -223,7 +206,7 @@ nodemon server.js
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 ### Internal Routes
 
@@ -263,7 +246,7 @@ Body: [{ "Text": "string to translate" }]
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 ### Voice Cooking Flow
 
@@ -325,7 +308,7 @@ Shows status code + message + stack trace (development only)
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Here's how to get started:
 
@@ -377,29 +360,8 @@ Then go to GitHub and open a Pull Request with a clear description of what you c
 
 ---
 
-### 💡 Good First Issues
 
-Looking to contribute but don't know where to start? Here are some ideas:
-
-- [ ] Add ingredient checklist with checkboxes (localStorage)
-- [ ] Add step progress bar (`Step 3 of 12`)
-- [ ] Add difficulty badge on recipe cards (Easy / Medium / Hard based on time)
-- [ ] Add "Recently Viewed" section on home page (localStorage)
-- [ ] Add server-side input validation on signup (email format, min password length)
-- [ ] Write a "Surprise Me" button that picks a random recipe
-
----
-
-## ⚠️ Known Issues
-
-- **Spoonacular free tier** has a daily limit of 150 API points. If the quota runs out, recipe pages will return empty or error. Consider caching results or upgrading the plan.
-- **Voice recognition** only works in Chrome and Edge (browsers that support `webkitSpeechRecognition`). Firefox is not supported.
-- **Speech in other languages** is intentionally blocked — only English and Hindi voice output is supported. Text translation to all 19 languages still works.
-- The app does not currently have server-side input validation beyond MongoDB's `unique` constraint on email.
-
----
-
-## 🔮 Future Improvements
+##  Future Improvements
 
 - [ ] Deploy on Render / Railway with live demo link
 - [ ] Add server-side validation (email format, password strength)
@@ -414,25 +376,20 @@ Looking to contribute but don't know where to start? Here are some ideas:
 
 ---
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 📬 Contact
+##  Contact
 
 **Priyansh Jain**
 
-- 📧 Email: [priyandhjain903@gmail.com](mailto:priyandhjain903@gmail.com)
-- 🐙 GitHub: [@priyansh9414](https://github.com/priyansh9414)
+-  Email: [priyandhjain903@gmail.com](mailto:priyandhjain903@gmail.com)
+-  GitHub: [@priyansh9414](https://github.com/priyansh9414)
 
 ---
 
 <div align="center">
 
-Made with ❤️ for food lovers
+Made with Love for food lovers
 
-⭐ If you found this project helpful, please give it a star on GitHub!
+If you found this project helpful, please give it a star on GitHub!
 
 </div>
